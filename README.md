@@ -22,7 +22,7 @@ four motor drivers, LiPo power handling and USB-C, all on one board.
 ![IRONMAN SHIELD Schematic](image/schematic.png)
 
 
-## What in this repo
+## structurre of repo
 
 ```
 dron/
@@ -34,24 +34,25 @@ dron/
     └── OBJ_PCB_Arduino shield.obj   # Arduino shield board
 ```
 
-## How to get the board made
+## how to use this project 
 
-1. Download `Gerber_PCB_2026-11-01/` (zip the folder if your fab asks for a single file)
-2. Upload it to a PCB fab like [JLCPCB](https://jlcpcb.com/) or [PCBWay](https://www.pcbway.com/)
-3. Select **4 layers**, and use the board size it detects
-4. If you want it assembled, upload `BOM.csv` and the pick-and-place data (`FlyingProbeTesting.json` has the component coordinates in mil)
+1. Download `Gerber_PCB_2026-11-01/`.
+2. Upload it to a PCB fab like [JLCPCB](https://jlcpcb.com/) or [PCBWay](https://www.pcbway.com/).
+3. Select **4 layers**, and use the board size.
+4. If you want it assembled, upload `BOM.csv` and the pick-and-place data.
 5. Official ordering steps from EasyEDA: <https://prodocs.easyeda.com/en/pcb/order-order-pcb/index.html>
 
 
-## Status
+## Status of project....
 
 - [x] Schematic
-- [x] PCB layout + Gerbers
+- [x] PCB layout
 - [x] BOM
 - [x] 3D model
-- [ ] Firmware 
-- [ ] Assembled + flight tested 
+- [ ] Assembled 
+- [ ] flight tested
+- [ ] physically build 
 
 ## AI disclosure
 
-> be honest here i use AI for better component selecting"
+> be honest here i use AI for better component selecting or working"
