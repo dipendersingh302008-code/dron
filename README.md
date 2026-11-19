@@ -1,58 +1,104 @@
-# Pakshi  — Mini Drone Flight Controller PCB
 
-this is **Pakshi** ("bird" in Hindi), a tiny 4-layer flight
-controller board for a mini quadcopter, built around an
-**ESP32-S3**. it has its own sensors (IMU, compass, barometer), 
-four motor drivers, LiPo power handling and USB-C, all on one board.
+# Pakshi — Mini Drone
 
-## Demo Video
+**Pakshi** (पक्षी, meaning "bird" in Hindi) is a compact, 4-layer flight controller PCB designed for a mini quadcopter. 
+The board is built around the **ESP32-S3** and brings the main flight-control electronics together on a single PCB.
 
-▶️ [lapse link](https://youtu.be/jbQo66OVOyo)
+The design includes an IMU, compass, barometer, four motor-driving stages, LiPo power-handling circuitry, and a USB-C connection.
 
-## lapse link
+## Demo and Development
 
-▶️ [lapse link](https://lapse.hackclub.com/timelapse/XGq26Qyi9MZT)
+- **Demo Video:** [Demo video](https://youtu.be/jbQo66OVOyo)
+- **lapse:** [lapse video](https://lapse.hackclub.com/timelapse/XGq26Qyi9MZT)
 
-## Project
-### 3D PCB Representation
-![IRONMAN SHIELD 3D PCB](image/3d.png)
+## PCB Design
+
+### 3D
+![Pakshi Mini Drone PCB - 3D Representation](image/3d.png)
+
 ### PCB Layout
-![IRONMAN SHIELD PCB](image/pcb.png)
-### Circuit Schematic
-![IRONMAN SHIELD Schematic](image/schematic.png)
+![Pakshi Mini Drone PCB Layout](image/pcb.png)
 
+### Schematic
+![Pakshi Mini Drone Circuit Schematic](image/schematic.png)
 
-## structurre of repo
+## Feature
 
+- ESP32-S3-based flight controller.
+- Four-layer PCB design.
+- On-board IMU, compass, and barometer.
+- Four motor-driving stages.
+
+## Repository Structure
+
+```text
+Pakshi-Mini-Drone/
+│
+├── README.md
+├── JOURNAL.md
+├── BOM.csv
+│
+├── PCB/
+│   └── EasyEDA_Project/
+│       ├── project.epro
+│       └── project.epro2
+│
+├── Gerber_PCB_2026-11-01/
+│   ├── Gerber files
+│   └── Drill files
+│
+├── Schematic/
+│   └── schematic.dxf
+│
+├── OBJ file/
+│   ├── OBJ FILE.obj
+│   ├── OBJ FILE.mtl
+│   ├── OBJ_PCB_Arduino shield.obj
+│   └── OBJ_PCB_Arduino shield.mtl
+│
+└── image/
+    ├── 3d.png
+    ├── pcb.png
+    └── schematic.png
 ```
-dron/
-├── BOM.csv                      # bill of materials
-├── Gerber_PCB_2026-11-01/       # manufacturing file
-├── DXF_mini dron_2026-11-1/     # schematic
-└── OBJ file/                    # 3D models OBJ
-    ├── OBJ FILE.obj             # main drone board
-    └── OBJ_PCB_Arduino shield.obj   # Arduino shield board
-```
 
-## how to use this project 
+## How to Use This Project
 
-1. Download `Gerber_PCB_2026-11-01/`.
-2. Upload it to a PCB fab like [JLCPCB](https://jlcpcb.com/) or [PCBWay](https://www.pcbway.com/).
-3. Select **4 layers**, and use the board size.
-4. If you want it assembled, upload `BOM.csv` and the pick-and-place data.
-5. Official ordering steps from EasyEDA: <https://prodocs.easyeda.com/en/pcb/order-order-pcb/index.html>
+1. Download `Gerber_PCB_2026-11-01/` folder.
+2. Upload the Gerber files in PCB manufacturer such as [JLCPCB](https://jlcpcb.com/) or [PCBWay](https://www.pcbway.com/).
+3. Check the board dimensions and Gerber preview before ordering.
+4. For PCB assembly, upload the BOM and order parts
 
+## Development Journal
 
-## Status of project....
+The development of Pakshi was completed through four major phases.
 
-- [x] Schematic
+| Phase | Work Description | Time |
+|---|---|---|
+| Phase 1 | Component Selection and Modification | 1 Hour |
+| Phase 2 | Schematic Wiring and Verification | 2 Hours |
+| Phase 3 | PCB Layout and Component Placement | 2 Hours |
+| Phase 4 | PCB Routing and Error Correction | 2 Hours |
+| **Total** | **Development Time** | **7 Hours** |
+
+For detailed development activities, see [JOURNAL.md](JOURNAL.md).
+
+## Project Status
+
+- [x] Component selection
+- [x] Schematic design
 - [x] PCB layout
-- [x] BOM
-- [x] 3D model
-- [ ] Assembled 
-- [ ] flight tested
-- [ ] physically build 
+- [x] PCB routing
+- [x] Bill of Materials
+- [x] 3D model export
+- [x] Gerber generation
+- [x] EasyEDA project files
+- [ ] PCB fabrication
+- [ ] PCB assembly
+- [ ] Physical hardware build
+- [ ] Flight testing
 
-## AI disclosure
+## AI Disclosure
 
-> be honest here i use AI for better component selecting or working"
+I used AI as an assistance tool during parts of this project, particularly for component research, component selection, and resolving design-related questions.
+
